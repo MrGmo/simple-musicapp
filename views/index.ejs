@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Simple App</title>
+</head>
+<body>
+
+        <h1>Famous Musicians</h1>
+        <h2>Add A Musician:
+          <form action="/addMusician" method="POST">
+              <input type="text" placeholder="Name" name="name">
+              <input type="text" placeholder="Type of Music" name="musicType">
+              <input type="submit">
+          </form>
+        </h2>
+    <section class="midBox">
+      <h3>Country
+        <ul class="musicians">
+        <% for(let i=0; i < info.length; i++) {%>
+            <li class="musician">
+          <%if (info[i].musicType.toUpperCase() === 'COUNTRY') { %>
+              <span><%= info[i].name %></span>
+              <span class='del'>x</span>
+          <% } %>
+            </li>
+        <% } %>
+        </ul>
+      </h3>
+    </section>
+    <section class="rightBox">
+      <h3>Pop
+        <ul class="musicians">
+        <% for(let i=0; i < info.length; i++) {%>
+            <li class="musician">
+          <%if (info[i].musicType.toUpperCase() === 'POP') { %>
+              <span><%= info[i].name %></span>
+              <span class='del'>x</span>
+          <% } %>
+            </li>
+        <% } %>
+        </ul>
+      </h3>
+    </section>
+    <section class="rightRightBox">
+      <h3>Rap
+        <ul class="musicians">
+        <% for(let i=0; i < info.length; i++) {%>
+            <li class="musician">
+          <%if (info[i].musicType.toUpperCase() === 'RAP') { %>
+              <span><%= info[i].name %></span>
+              <span class='del'>x</span>
+          <% } %>
+            </li>
+        <% } %>
+        </ul>
+      </h3>
+    </section>
+    <section class="bottomBox">
+      <h3>Other
+        <ul class="musicians">
+        <% for(let i=0; i < info.length; i++) {%>
+            <li class="musician">
+          <%if (info[i].musicType.toUpperCase() !== 'RAP' && info[i].musicType.toUpperCase() !== 'POP' && info[i].musicType.toUpperCase() !== 'COUNTRY') { %>
+              <span><%= info[i].name %></span>
+              <span><%= info[i].musicType %></span>
+              <span class='del'>x</span>
+          <% } %>
+            </li>
+        <% } %>
+        </ul>
+      </h3>
+    </section>
+
+<script type="text/javascript" src='main.js'></script>
+</body>
+</html>
