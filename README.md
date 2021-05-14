@@ -10,7 +10,7 @@ Tech used: HTML, CSS, JavaScript, EJS
 
 Building this simple app was my introduction to the CRUD process and EJS. It's really a spin off the common todo list without the update feature. I chose to incorporate EJS because it was the simplest template I could use for the front end. If you already know HTML and JS then EJS is really easy to pick up, it's more or less the two combined with some few modifications.
 
-Optimizations
+Optimizations:
 
 I really should have included a bit more CSS to make the app look a bit better, but it wasn't the main objective of this project and I was a bit short on time. I made the app responsive to mobile instead of making it more colorful, it was a tradeoff.
 
